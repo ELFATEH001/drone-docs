@@ -1,0 +1,11 @@
+site_name: Drone Project — Lyon 1
+theme:
+  name: material
+  palette:
+    primary: indigo
+
+nav:
+  - Home: index.md
+  - Hardware: hardware.md
+  - ROS 2 Stack: ros2.md
+  - SE3 Controller: controller.md
