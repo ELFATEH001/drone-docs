@@ -1,8 +1,10 @@
-site_name: Drone Project — Lyon 1
+site_name: Drone Project — UCB Lyon 1
 theme:
   name: material
   palette:
-    primary: indigo
+    # primary: indigo
+    primary: orange
+    # accent: orange
 
 nav:
   - Home: index.md
