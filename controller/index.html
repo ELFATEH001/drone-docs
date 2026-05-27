@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#controller" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -338,6 +343,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SE3 Controller
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -355,6 +380,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-controller-on-se3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Controller on SE(3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Controller on SE(3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desired-attitude-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desired Attitude Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Laws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gain-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gain Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-with-pd-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison with PD Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -377,6 +548,143 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-controller-on-se3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Controller on SE(3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Controller on SE(3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desired-attitude-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desired Attitude Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Laws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gain-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gain Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-with-pd-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison with PD Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -393,9 +701,136 @@
 
 
 
-  <h1>SE3 Controller</h1>
-
-
+<h1 id="controller">Controller</h1>
+<h2 id="overview">Overview</h2>
+<p>The drone is an <strong>underactuated system</strong>: it has 4 control inputs (rotor speeds) but 6 degrees of freedom (3 translational, 3 rotational). As a result, it is impossible to independently control all positions and orientations simultaneously. Our control strategy therefore targets <strong>4 degrees of freedom</strong>: the 3D position <span class="arithmatex">\(p^w\)</span> and the yaw angle <span class="arithmatex">\(\psi\)</span>.</p>
+<p>Two control architectures were studied and implemented:</p>
+<table>
+<thead>
+<tr>
+<th>Controller</th>
+<th>Approach</th>
+<th>Suitable for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PD (near-hovering)</td>
+<td>Linearization around hover</td>
+<td>Small angle maneuvers</td>
+</tr>
+<tr>
+<td>Geometric SE(3)</td>
+<td>Nonlinear, SO(3)-based</td>
+<td>Aggressive maneuvers</td>
+</tr>
+</tbody>
+</table>
+<p>The geometric controller is the primary controller used in this project.</p>
+<hr />
+<h2 id="dynamic-model">Dynamic Model</h2>
+<p>The quadrotor dynamics are described by the Newton-Euler equations for a rigid body:</p>
+<div class="arithmatex">\[\begin{bmatrix} f^w \\ \tau^B \end{bmatrix} = \begin{bmatrix} mI_3 &amp; 0 \\ 0 &amp; J \end{bmatrix} \begin{bmatrix} a^w \\ \alpha^B \end{bmatrix} + \begin{bmatrix} -mg^w \\ \omega^B \times J\omega^B \end{bmatrix}\]</div>
+<p>Expanding with the forces and torques generated by the rotors, the full model becomes:</p>
+<div class="arithmatex">\[\begin{bmatrix} m\dot{v}^w \\ J\dot{\omega}^B \end{bmatrix} = \begin{bmatrix} -mge_3 \\ -\omega^B \times J\omega^B \end{bmatrix} + \begin{bmatrix} R^w_B &amp; 0 \\ 0 &amp; I_3 \end{bmatrix} F\mathbf{w}\]</div>
+<p>where <span class="arithmatex">\(\mathbf{w} = [w_1|w_1|,\ w_2|w_2|,\ w_3|w_3|,\ w_4|w_4|]^T\)</span> contains the signed squared rotor velocities, and <span class="arithmatex">\(F\)</span> is the <strong>allocation matrix</strong> mapping rotor inputs to forces and torques:</p>
+<div class="arithmatex">\[\begin{bmatrix} f^B_z \\ \tau^B_x \\ \tau^B_y \\ \tau^B_z \end{bmatrix} = F\mathbf{w} = \begin{bmatrix} c_f &amp; c_f &amp; c_f &amp; c_f \\ \cdots &amp; \cdots &amp; \cdots &amp; \cdots \end{bmatrix} \mathbf{w}\]</div>
+<p>The state of the system is <span class="arithmatex">\((p^w,\ v^w,\ R^w_B,\ \omega^B)\)</span> and evolves according to:</p>
+<div class="arithmatex">\[\dot{p}^w = v^w, \qquad \dot{R}^w_B = R^w_B [\omega^B]_\times\]</div>
+<hr />
+<h2 id="geometric-controller-on-se3">Geometric Controller on SE(3)</h2>
+<p>The geometric controller was originally introduced by <strong>Lee, Leok, and McClamroch (2010)</strong>. It is a nonlinear controller defined directly on the Lie group <span class="arithmatex">\(SE(3) = SO(3) \times \mathbb{R}^3\)</span>, which avoids the singularities associated with Euler angle representations (gimbal lock). Unlike PD or backstepping controllers, it supports <strong>aggressive maneuvers</strong> such as recovery from an inverted state.</p>
+<h3 id="control-architecture">Control Architecture</h3>
+<p>┌─────────────────────────────────────────────────┐
+│ Controller │
+p_d ──►│ Position z^w_d Attitude f^B_z ┌──────┐ │ w ┌──────────┐
+│ Control ────────► Control ──────► │ F⁻¹ │─┼────►│ Drone │
+x̃_d ──►│ τ^B ──────────► τ^B ──►│ │ │ │ Dynamics │
+└─────────────────────────────────────────┘──────┘ │ └──────────┘
+▲ │ │
+└──────── p^w, v^w, R^w_B, ω^B ───────────┘◄─────────┘</p>
+<p>The controller takes as inputs the desired position <span class="arithmatex">\(p^w_d\)</span> and a desired yaw direction <span class="arithmatex">\(\tilde{x}^w_d = [\cos\psi_d,\ \sin\psi_d,\ 0]^T\)</span>, and outputs the total thrust <span class="arithmatex">\(f^B_z\)</span> and the control torque <span class="arithmatex">\(\tau^B\)</span>.</p>
+<h3 id="tracking-errors">Tracking Errors</h3>
+<p>The errors are defined on the appropriate manifolds:</p>
+<div class="arithmatex">\[e_p = p^w - p^w_d \qquad \text{(position error)}\]</div>
+<div class="arithmatex">\[e_v = v^w - v^w_d \qquad \text{(velocity error)}\]</div>
+<div class="arithmatex">\[e_R = \frac{1}{2}\left((R^w_d)^T R^w_B - (R^w_B)^T R^w_d\right)^\vee \qquad \text{(rotation error on SO(3))}\]</div>
+<div class="arithmatex">\[e_\omega = \omega^B - (R^w_B)^T R^w_d\, \omega_d \qquad \text{(angular velocity error)}\]</div>
+<p>The rotation error <span class="arithmatex">\(e_R\)</span> is a vector parametrization of the relative rotation between the current attitude <span class="arithmatex">\(R^w_B\)</span> and the desired attitude <span class="arithmatex">\(R^w_d\)</span>. It is derived from the SO(3) log map and vanishes when the two frames are aligned.</p>
+<h3 id="desired-attitude-construction">Desired Attitude Construction</h3>
+<p>The desired third body axis <span class="arithmatex">\(z^w_d\)</span> is constructed from the position controller output:</p>
+<div class="arithmatex">\[z^w_d = \frac{-k_p e_p - k_v e_v + mge_3 + m\ddot{p}^w_d}{\lVert -k_p e_p - k_v e_v + mge_3 + m\ddot{p}^w_d \rVert}\]</div>
+<p>The full desired rotation matrix is then assembled as:</p>
+<div class="arithmatex">\[R^w_d = \left[\frac{(z^w_d \times \tilde{x}^w_d) \times z^w_d}{\lVert(z^w_d \times \tilde{x}^w_d) \times z^w_d\rVert},\quad \frac{z^w_d \times \tilde{x}^w_d}{\lVert z^w_d \times \tilde{x}^w_d \rVert},\quad z^w_d\right] \in SO(3)\]</div>
+<h3 id="control-laws">Control Laws</h3>
+<p><strong>Thrust:</strong></p>
+<div class="arithmatex">\[f^B_z = \left(-k_p e_p - k_v e_v + mge_3 + m\ddot{p}^w_d\right) \cdot R^w_B e_3\]</div>
+<p>The dot product with <span class="arithmatex">\(R^w_B e_3\)</span> projects the desired force onto the current body <span class="arithmatex">\(z\)</span>-axis. When there is an attitude error, the thrust magnitude is naturally reduced, preventing instability.</p>
+<p><strong>Torque:</strong></p>
+<div class="arithmatex">\[\tau^B = -k_R e_R - k_\omega e_\omega + \omega^B \times J\omega^B - J\left([\omega^B]_\times (R^w_B)^T R^w_d\, \omega_d - (R^w_B)^T R^w_d\, \dot{\omega}_d\right)\]</div>
+<p>This torque law exponentially stabilizes the attitude tracking error on <span class="arithmatex">\(SO(3)\)</span>.</p>
+<h3 id="gain-summary">Gain Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Gain</th>
+<th>Controls</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(k_p\)</span></td>
+<td>Position error <span class="arithmatex">\(e_p\)</span></td>
+<td>Stiffness of position response</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(k_v\)</span></td>
+<td>Velocity error <span class="arithmatex">\(e_v\)</span></td>
+<td>Damping of translational dynamics</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(k_R\)</span></td>
+<td>Rotation error <span class="arithmatex">\(e_R\)</span></td>
+<td>Stiffness of attitude response</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(k_\omega\)</span></td>
+<td>Angular velocity error <span class="arithmatex">\(e_\omega\)</span></td>
+<td>Damping of rotational dynamics</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="implementation">Implementation</h2>
+<p>The geometric controller is implemented as a <strong>ROS 2 node</strong> (<code>controller_node_visual</code>) in C++, using the <a href="https://eigen.tuxfamily.org/">Eigen</a> library for all linear algebra operations. It subscribes to:</p>
+<ul>
+<li><code>/mavros/local_position/pose</code> — current position and orientation (<span class="arithmatex">\(p^w\)</span>, <span class="arithmatex">\(R^w_B\)</span>)</li>
+<li><code>/mavros/local_position/velocity_body</code> — current body-frame velocity</li>
+<li>Desired trajectory setpoints (position, velocity, acceleration, yaw)</li>
+</ul>
+<p>And publishes:</p>
+<ul>
+<li><code>/mavros/setpoint_raw/attitude</code> — attitude setpoint and thrust command sent to ArduPilot via MAVROS</li>
+</ul>
+<p>The allocation matrix inversion <span class="arithmatex">\(F^{-1}\)</span> is handled internally by ArduPilot on the MiniPix flight controller.</p>
+<hr />
+<h2 id="comparison-with-pd-controller">Comparison with PD Controller</h2>
+<p>The near-hovering PD controller is derived by <strong>linearizing</strong> the equations of motion around the hover equilibrium (<span class="arithmatex">\(\phi = \theta = 0\)</span>, <span class="arithmatex">\(\dot{p} = 0\)</span>). It uses nested control loops for attitude and position, with Euler angles as the attitude representation.</p>
+<p>While simple and computationally efficient, the PD controller:</p>
+<ul>
+<li>Is only valid near hover (small roll and pitch angles)</li>
+<li>Suffers from Euler angle singularities</li>
+<li>Cannot perform aggressive maneuvers</li>
+</ul>
+<p>The geometric controller lifts these restrictions by working directly on <span class="arithmatex">\(SO(3)\)</span>, at the cost of slightly higher implementation complexity.</p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>T. Lee, M. Leok, N. H. McClamroch. <em>Geometric tracking control of a quadrotor UAV on SE(3)</em>. IEEE CDC, 2010.</li>
+<li>D. Mellinger, V. Kumar. <em>Minimum snap trajectory generation and control for quadrotors</em>. IEEE ICRA, 2011.</li>
+<li>L. Carlone. <em>16.485 VNAV Lecture Notes: Quadrotor Dynamics &amp; Control</em>. MIT, Fall 2023.</li>
+</ul>
 
 
 
@@ -455,6 +890,8 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
