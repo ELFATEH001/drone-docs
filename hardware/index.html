@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../configuration/">
       
       
-        <link rel="next" href="../ros2/">
+        <link rel="next" href="../simulation/">
       
       
         
@@ -70,6 +70,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#hardware-assembly-components" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -223,6 +228,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drone configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -232,6 +264,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -250,6 +302,107 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-frame-and-chassis-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Frame and Chassis Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-motors-escs-and-propellers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Motors, ESCs, and Propellers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-flight-controller-avionics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Flight Controller &amp; Avionics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-companion-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Companion Computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mechanical-assets-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mechanical Assets &amp; Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -325,6 +478,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-frame-and-chassis-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Frame and Chassis Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-motors-escs-and-propellers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Motors, ESCs, and Propellers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-flight-controller-avionics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Flight Controller &amp; Avionics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-companion-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Companion Computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mechanical-assets-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mechanical Assets &amp; Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -341,9 +559,78 @@
 
 
 
-  <h1>Hardware</h1>
+<h1 id="hardware-assembly-components">Hardware Assembly &amp; Components</h1>
+<p>This document outlines the physical build and electrical components of the drone.</p>
+<p>The initial concept was based on a Parallax ELEV-8 kit. However, because the original chassis, flight controller, and motor mounts were missing, we custom-engineered replacement parts and upgraded the core electronics to support our specific payload and requirements.</p>
+<div class="admonition note">
+<p class="admonition-title">Prototyping Status</p>
+</div>
+<p>As this is an active experimental build, several components are currently secured using zip ties and tape. This allows for rapid and easy component swapping.</p>
+<hr />
+<h2 id="1-frame-and-chassis-assembly">1. Frame and Chassis Assembly</h2>
+<p>To replace the missing Parallax parts, we modeled a custom multi-level chassis in SolidWorks and manufactured it using laser cutting. The design uses spacers to separate the levels and distribute the hardware:</p>
+<ul>
+<li><strong>Main Body Stack:</strong> Consists of three identical, laser-cut chassis plates stacked on top of each other using standoffs. These lower plates house the heavy power distribution wiring and the ESCs.</li>
+<li><strong>Battery Placement:</strong> The 3S LiPo battery is strapped directly to the outer bottom face of the lowest chassis plate.</li>
+<li><strong>Avionics Plate:</strong> A smaller, dedicated chassis plate is mounted on the very top of the stack. This isolates the flight controller from the main power lines.</li>
+</ul>
+<hr />
+<h2 id="2-motors-escs-and-propellers">2. Motors, ESCs, and Propellers</h2>
+<p>Because we are adding a companion computer, we needed more lifting capacity than a standard ELEV-8. We sourced heavy-duty hardware from KDE Direct.</p>
+<ul>
+<li><strong>Motors:</strong> 4x KDE3510XF-475 (Brushless)</li>
+<li><strong>ESCs:</strong> 4x KDEXF-UAS55</li>
+<li><strong>Propellers:</strong> KDE-CF155-DP-M4 (15.5-inch folding carbon fiber blades)</li>
+</ul>
+<hr />
+<h2 id="3-flight-controller-avionics">3. Flight Controller &amp; Avionics</h2>
+<p>The original Parallax control board was replaced with a system capable of running ArduPilot, allowing us to send MAVLink commands from a companion computer.</p>
+<ul>
+<li><strong>Flight Controller:</strong> Radiolink MiniPix (Mounted on the top avionics plate).</li>
+<li><strong>Receiver:</strong> Happymodel ELRS 2.4G EP2 TCXO.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Custom Receiver Wiring (TELEM 1)</p>
+</div>
+<p>The Radiolink MiniPix typically expects a standard receiver to be plugged into the <code>RC IN</code> port. However, our Happymodel ExpressLRS receiver uses a serial protocol.
+Instead of using <code>RC IN</code>, we bypassed it and wired the receiver directly to the <strong>TELEM1 serial port</strong>. This allows us to transmit both the pilot's control inputs and receive full MAVLink telemetry back to the controller over a single connection.</p>
+<pre class="mermaid"><code>graph TD
+  BATT[3S LiPo Battery] --&gt; PDB[Power Distribution]
+  BATT --&gt; REG[5V Regulator]
+  PDB --&gt; ESC1[ESC 1: KDEXF-UAS55]
+  PDB --&gt; ESC2[ESC 2: KDEXF-UAS55]
+  PDB --&gt; ESC3[ESC 3: KDEXF-UAS55]
+  PDB --&gt; ESC4[ESC 4: KDEXF-UAS55]
 
+  ESC1 --&gt; M1[Motor 1: KDE3510XF-475]
+  ESC2 --&gt; M2[Motor 2: KDE3510XF-475]
+  ESC3 --&gt; M3[Motor 3: KDE3510XF-475]
+  ESC4 --&gt; M4[Motor 4: KDE3510XF-475]
 
+  PDB -.-&gt;|5V Power| FC[Radiolink MiniPix]
+
+  FC -.-&gt;|PWM Signal| ESC1
+  FC -.-&gt;|PWM Signal| ESC2
+  FC -.-&gt;|PWM Signal| ESC3
+  FC -.-&gt;|PWM Signal| ESC4
+
+  FC &lt;--&gt;|TELEM 1| RX[Happymodel EP2 TCXO]
+  FC &lt;--&gt;|USB| RPI[Raspberry Pi 4]
+  REG --&gt; RPI
+  RPI --- CAM[RPi Camera Module]</code></pre>
+<h2 id="4-companion-computer">4. Companion Computer</h2>
+<p>To run the ROS 2 software stack, we are integrating an onboard computer.</p>
+<ul>
+<li><strong>Hardware:</strong> Raspberry Pi 4.</li>
+<li><strong>Vision:</strong> Standard Raspberry Pi Camera module.</li>
+<li><strong>Connection:</strong> The RPi 4 connects directly to the MiniPix flight controller via USB to send and receive MAVLink commands. Physical mounting for these components is currently being finalized.</li>
+</ul>
+<h2 id="5-mechanical-assets-manufacturing">5. Mechanical Assets &amp; Manufacturing</h2>
+<p>The physical drone was manufactured using the specific 2D laser-cutting profiles below.</p>
+<ul>
+<li><strong><a href="../assets/CAD/Chassis.DXF">Download Main Chassis Plate (.dxf)</a></strong> - Profile used for the three main stacked body plates.</li>
+<li><strong><a href="../assets/CAD/ControllerBase.DXF">Download Controller Plate (.dxf)</a></strong> - Profile used for the smaller top plate holding the flight controller.</li>
+</ul>
 
 
 
@@ -397,6 +684,12 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
