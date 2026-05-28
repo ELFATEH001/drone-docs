@@ -21,7 +21,7 @@
     
     
       
-        <title>Simulation - Drone Project — UCB Lyon 1</title>
+        <title>Trajectory Optimization - Drone Project — UCB Lyon 1</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#trajectory-optimization" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Simulation
+              Trajectory Optimization
             
           </span>
         </div>
@@ -311,6 +316,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trajectory Optimization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -319,7 +344,7 @@
   <span class="md-ellipsis">
     
   
-    Simulation
+    Trajectory Optimization
   
 
     
@@ -328,6 +353,130 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ardupilot-s-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArduPilot S-Curve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-snap-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum Snap Optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flight-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flight Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceleration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -350,6 +499,121 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ardupilot-s-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArduPilot S-Curve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-snap-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum Snap Optimization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulation Comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flight-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flight Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#velocity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Velocity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceleration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -366,9 +630,116 @@
 
 
 
-  <h1>Simulation</h1>
-
-
+<h1 id="trajectory-optimization">Trajectory Optimization</h1>
+<h2 id="overview">Overview</h2>
+<p>Trajectory generation determines how the drone moves between waypoints. Two approaches were
+studied and compared in simulation: the <strong>ArduPilot S-curve</strong> (native trajectory generator)
+and <strong>Minimum Snap</strong> polynomial optimization.</p>
+<hr />
+<h2 id="ardupilot-s-curve">ArduPilot S-Curve</h2>
+<p>ArduPilot's native trajectory generator produces jerk-limited S-curve profiles between waypoints.
+Compared to a trapezoidal velocity profile, the S-curve generates smoother commands and softer
+dynamics, reducing mechanical stress on the actuators.</p>
+<p>However, it does not perform true velocity or time optimization. When multiple waypoints must
+be traversed under obstacle or time constraints, the S-curve becomes limiting — it cannot
+exploit the full dynamic envelope of the drone.</p>
+<hr />
+<h2 id="minimum-snap-optimization">Minimum Snap Optimization</h2>
+<p>The Minimum Snap approach generates smooth polynomial trajectories by minimizing the fourth
+derivative of position (snap) over the flat outputs <span class="arithmatex">\(\sigma = [x, y, z, \psi]^T\)</span>:</p>
+<div class="arithmatex">\[J(\sigma) = \int_0^T \left[ \left(x^{(4)}\right)^2 + \left(y^{(4)}\right)^2 + \left(z^{(4)}\right)^2 \right] dt + \int_0^T \left(\psi^{(2)}\right)^2 dt\]</div>
+<p>This exploits the <strong>differential flatness</strong> property of the quadrotor: all states and inputs
+can be expressed as algebraic functions of <span class="arithmatex">\(\sigma\)</span> and its derivatives, so any smooth trajectory
+in the flat output space is directly feasible for the drone without dynamic simulation.</p>
+<p>The optimization is reformulated as a <strong>quadratic program (QP)</strong>. Two formulations were evaluated:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Solver</th>
+<th>Time (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constrained QP</td>
+<td>MATLAB <code>quadprog</code></td>
+<td>9.5</td>
+</tr>
+<tr>
+<td>Constrained QP</td>
+<td>C++/Eigen</td>
+<td>0.18</td>
+</tr>
+<tr>
+<td>Unconstrained QP</td>
+<td>MATLAB</td>
+<td>2.7</td>
+</tr>
+<tr>
+<td>Unconstrained QP</td>
+<td>C++/Eigen</td>
+<td>0.34</td>
+</tr>
+</tbody>
+</table>
+<p>The unconstrained formulation was adopted for its numerical stability — high-order polynomials
+with many segments tend to produce near-singular matrices in the constrained case.</p>
+<p>All linear algebra operations are implemented in <strong>C++ with Eigen</strong>.</p>
+<hr />
+<h2 id="simulation-comparison">Simulation Comparison</h2>
+<p>Both methods were tested in simulation using ROS 2, ArduPilot SITL, and Gazebo on a
+rectangular trajectory (3 m sides, 5 m altitude), returning to the start point.</p>
+<h3 id="flight-path">Flight Path</h3>
+<p>The ArduPilot S-curve follows a path close to a square. The Minimum Snap trajectory produces
+smoother, more curved paths due to the high-degree polynomial formulation — intermediate
+waypoint constraints can be added to enforce sharper corners if required.</p>
+<h3 id="velocity">Velocity</h3>
+<p>Minimum Snap reduces total mission time by approximately <strong>40%</strong> and increases peak velocity
+from 1.5 m/s to 2.3 m/s. Velocity oscillations visible in the ArduPilot profile result from
+the controller struggling to track the aggressive S-curve commands — these can be reduced
+with gain tuning.</p>
+<h3 id="acceleration">Acceleration</h3>
+<p>The Minimum Snap acceleration profile is smoother and exhibits a slightly lower peak, resulting
+in reduced actuator stress and a more fluid dynamic response.</p>
+<hr />
+<h2 id="implementation">Implementation</h2>
+<p>The trajectory optimizer is implemented in <strong>C++ with Eigen</strong> and integrated as a ROS 2 node.
+Waypoints are defined as a list of positions; the optimizer computes the full polynomial
+trajectory and streams setpoints to the SE3 controller at runtime.</p>
+<p>Key parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polynomial degree</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Flat outputs</td>
+<td><span class="arithmatex">\(x, y, z, \psi\)</span></td>
+</tr>
+<tr>
+<td>Solver</td>
+<td>Unconstrained QP (Eigen)</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>C++</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>D. Mellinger, V. Kumar. <em>Minimum Snap Trajectory Generation and Control for Quadrotors</em>. IEEE ICRA, 2011.</li>
+<li>C. Richter, A. Bry, N. Roy. <em>Polynomial Trajectory Planning for Aggressive Quadrotor Flight in Dense Indoor Environments</em>. Robotics Research, Springer, 2016.</li>
+</ul>
 
 
 
