@@ -40,15 +40,6 @@ $$\dot{p}^w = v^w, \qquad \dot{R}^w_B = R^w_B [\omega^B]_\times$$
 The geometric controller was originally introduced by **Lee, Leok, and McClamroch (2010)**. It is a nonlinear controller defined directly on the Lie group $SE(3) = SO(3) \times \mathbb{R}^3$, which avoids the singularities associated with Euler angle representations (gimbal lock). Unlike PD or backstepping controllers, it supports **aggressive maneuvers** such as recovery from an inverted state.
 
 ### Control Architecture
-┌─────────────────────────────────────────────────┐
-│ Controller │
-p_d ──►│ Position z^w_d Attitude f^B_z ┌──────┐ │ w ┌──────────┐
-│ Control ────────► Control ──────► │ F⁻¹ │─┼────►│ Drone │
-x̃_d ──►│ τ^B ──────────► τ^B ──►│ │ │ │ Dynamics │
-└─────────────────────────────────────────┘──────┘ │ └──────────┘
-▲ │ │
-└──────── p^w, v^w, R^w_B, ω^B ───────────┘◄─────────┘
-
 
 The controller takes as inputs the desired position $p^w_d$ and a desired yaw direction $\tilde{x}^w_d = [\cos\psi_d,\ \sin\psi_d,\ 0]^T$, and outputs the total thrust $f^B_z$ and the control torque $\tau^B$.
 

@@ -8,11 +8,13 @@ theme:
 
 nav:
   - Home: index.md
-  - Drone configuration: configuration.md
+  # - Drone configuration: configuration.md
   - Hardware: hardware.md
-  - Simulation: simulation.md
-  - ROS 2 Stack: ros2.md
   - SE3 Controller: controller.md
+  - ROS 2 Stack: ros2.md
+  - Simulation: simulation.md
+  
+  
 
 markdown_extensions:
   # Enables the colored warning/info boxes
