@@ -460,6 +460,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -631,6 +642,17 @@
     <span class="md-ellipsis">
       
         Workspace Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
       
     </span>
   </a>
@@ -878,15 +900,12 @@ publishes a warning on <code>/rosout</code>.</p>
 └── config/
     ├── se3_params.yaml
     └── camera_info.yaml
-
----
-
-## Debugging
-
-Monitor all signals live with PlotJuggler:
-```bash
-ros2 run plotjuggler plotjuggler
 </code></pre></div>
+<hr />
+<h2 id="debugging">Debugging</h2>
+<p>Monitor all signals live with PlotJuggler:
+<div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>run<span class="w"> </span>plotjuggler<span class="w"> </span>plotjuggler
+</code></pre></div></p>
 <p>Check node health:
 <div class="highlight"><pre><span></span><code>ros2<span class="w"> </span>node<span class="w"> </span>list
 ros2<span class="w"> </span>topic<span class="w"> </span>hz<span class="w"> </span>/mavros/local_position/odom
