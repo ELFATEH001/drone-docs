@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../ros2/">
+        <link rel="prev" href="../hardware/">
       
+      
+        <link rel="next" href="../ros2/">
       
       
         
@@ -229,33 +231,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Drone configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../hardware/" class="md-nav__link">
         
   
@@ -264,60 +239,6 @@
     
   
     Hardware
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../simulation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Simulation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ros2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ROS 2 Stack
   
 
     
@@ -527,6 +448,60 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS 2 Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -741,14 +716,6 @@
 <h2 id="geometric-controller-on-se3">Geometric Controller on SE(3)</h2>
 <p>The geometric controller was originally introduced by <strong>Lee, Leok, and McClamroch (2010)</strong>. It is a nonlinear controller defined directly on the Lie group <span class="arithmatex">\(SE(3) = SO(3) \times \mathbb{R}^3\)</span>, which avoids the singularities associated with Euler angle representations (gimbal lock). Unlike PD or backstepping controllers, it supports <strong>aggressive maneuvers</strong> such as recovery from an inverted state.</p>
 <h3 id="control-architecture">Control Architecture</h3>
-<p>┌─────────────────────────────────────────────────┐
-│ Controller │
-p_d ──►│ Position z^w_d Attitude f^B_z ┌──────┐ │ w ┌──────────┐
-│ Control ────────► Control ──────► │ F⁻¹ │─┼────►│ Drone │
-x̃_d ──►│ τ^B ──────────► τ^B ──►│ │ │ │ Dynamics │
-└─────────────────────────────────────────┘──────┘ │ └──────────┘
-▲ │ │
-└──────── p^w, v^w, R^w_B, ω^B ───────────┘◄─────────┘</p>
 <p>The controller takes as inputs the desired position <span class="arithmatex">\(p^w_d\)</span> and a desired yaw direction <span class="arithmatex">\(\tilde{x}^w_d = [\cos\psi_d,\ \sin\psi_d,\ 0]^T\)</span>, and outputs the total thrust <span class="arithmatex">\(f^B_z\)</span> and the control torque <span class="arithmatex">\(\tau^B\)</span>.</p>
 <h3 id="tracking-errors">Tracking Errors</h3>
 <p>The errors are defined on the appropriate manifolds:</p>
